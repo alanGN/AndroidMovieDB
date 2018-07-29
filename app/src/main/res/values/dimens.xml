@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="minimal_margin_between_items">6dp</dimen>
+    <dimen name="elevation_general_toolbar">4dp</dimen>
+    <dimen name="margin_general_between_items">12dp</dimen>
+    <dimen name="margin_general_layout">24dp</dimen>
+    <dimen name="margin_general_layout_half">12dp</dimen>
+</resources>

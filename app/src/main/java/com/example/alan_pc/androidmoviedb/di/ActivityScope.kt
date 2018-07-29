@@ -1,4 +1,4 @@
-package com.example.alan_pc.droidtv.di
+package com.example.alan_pc.androidmoviedb.di
 
 import java.lang.annotation.Retention
 import java.lang.annotation.RetentionPolicy

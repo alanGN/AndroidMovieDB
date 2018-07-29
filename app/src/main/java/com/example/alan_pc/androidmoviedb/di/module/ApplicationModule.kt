@@ -4,6 +4,8 @@ import android.app.Application
 import android.app.Service
 import android.content.Context
 import android.content.res.Resources
+import com.example.alan_pc.androidmoviedb.data.repository.TmdbRepoImpl
+import com.example.alan_pc.androidmoviedb.domain.business.tmdb.TmdbRepo
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -44,5 +46,10 @@ class ApplicationModule {
     fun provideResources() : Resources {
         return context.resources
     }
-    
+
+    @Provides
+    fun provideTmdbRepository(tmdbRepoImpl: TmdbRepoImpl)
+            : TmdbRepo {
+        return tmdbRepoImpl
+    }
 }

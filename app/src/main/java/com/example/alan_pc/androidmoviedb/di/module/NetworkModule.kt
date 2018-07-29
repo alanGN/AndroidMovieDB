@@ -1,10 +1,10 @@
-package com.example.alan_pc.droidtv.di.module
+package com.example.alan_pc.androidmoviedb.di.module
 
 import android.app.Application
 import com.example.alan_pc.androidmoviedb.BuildConfig
 import com.example.alan_pc.androidmoviedb.data.api.TmdbApi
 import com.example.alan_pc.androidmoviedb.data.converter.EmptyBodyConverterFactory
-import com.example.alan_pc.droidtv.di.NamedProperties
+import com.example.alan_pc.androidmoviedb.di.NamedProperties
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import dagger.Module
 import dagger.Provides

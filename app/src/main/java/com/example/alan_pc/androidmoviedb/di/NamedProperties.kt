@@ -1,4 +1,4 @@
-package com.example.alan_pc.droidtv.di
+package com.example.alan_pc.androidmoviedb.di
 
 /**
  * Created by ALAN-PC on 29/07/2018

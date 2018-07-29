@@ -2,6 +2,7 @@ package com.example.alan_pc.androidmoviedb
 
 import android.app.Application
 import com.example.alan_pc.androidmoviedb.di.component.ApplicationComponent
+import com.example.alan_pc.androidmoviedb.di.component.DaggerApplicationComponent
 import com.example.alan_pc.androidmoviedb.di.module.ApplicationModule
 
 /**

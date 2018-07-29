@@ -1,4 +1,4 @@
-package com.example.alan_pc.droidtv.di.module
+package com.example.alan_pc.androidmoviedb.di.module
 
 import dagger.Module
 
