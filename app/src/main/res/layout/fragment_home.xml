@@ -1,12 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <EditText
+        android:id="@+id/textToSearchEt"
+        android:layout_width="match_parent"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_general_between_items"
+        android:layout_marginEnd="@dimen/margin_general_layout"
+        android:layout_marginStart="@dimen/margin_general_layout"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite" />
+
+    <Button
+        android:id="@+id/searchBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/margin_general_between_items"
+        android:text="@string/search" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    </android.support.v7.widget.RecyclerView>
+        android:layout_height="wrap_content" />
+
 </LinearLayout>

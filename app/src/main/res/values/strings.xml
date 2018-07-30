@@ -3,4 +3,6 @@
     <string name="title">TITLE:</string>
     <string name="average">AVERAGE:</string>
     <string name="imageCover">IMAGE COVER</string>
+    <string name="search">search</string>
+    <string name="showWords">show words</string>
 </resources>

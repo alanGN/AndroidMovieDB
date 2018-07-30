@@ -18,6 +18,7 @@ abstract class GeneralSubscriber<T, K>(protected var viewComponent: GeneralView)
         else onError(Exception("Response object is null"))
     }
 
+
     override fun onError(e: Throwable) {
         viewComponent.onResultError(e.message)
     }
@@ -41,4 +42,5 @@ abstract class GeneralSubscriber<T, K>(protected var viewComponent: GeneralView)
     protected abstract fun mapperResponseDto(@NonNull t: T): K
 
     protected abstract fun isValid(@NonNull t: T): Boolean
+
 }
