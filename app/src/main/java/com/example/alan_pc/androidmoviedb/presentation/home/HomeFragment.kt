@@ -1,5 +1,7 @@
 package com.example.alan_pc.androidmoviedb.presentation.home
 
+import android.app.Activity
+import android.content.Context
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
@@ -7,7 +9,6 @@ import android.view.*
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
 import android.widget.LinearLayout
-import android.widget.TextView
 import android.widget.Toast
 import com.example.alan_pc.androidmoviedb.R
 import com.example.alan_pc.androidmoviedb.R.id.show_words
@@ -15,10 +16,9 @@ import com.example.alan_pc.androidmoviedb.domain.business.tmdb.MovieResponse
 import com.example.alan_pc.androidmoviedb.presentation.general.EndlessRecyclerOnScrollListener
 import com.example.alan_pc.androidmoviedb.presentation.general.GeneralFragment
 import com.example.alan_pc.androidmoviedb.presentation.home.adapter.MovieAdapter
+import com.example.alan_pc.androidmoviedb.presentation.wordlist.WordListActivity
 import kotlinx.android.synthetic.main.fragment_home.*
 import javax.inject.Inject
-import android.app.Activity
-import android.content.Context
 
 
 /**
@@ -75,7 +75,10 @@ class HomeFragment : GeneralFragment(), HomeMvp.View {
 
         textToSearchEt.setOnEditorActionListener { _, actionId, event ->
             if (actionId == EditorInfo.IME_ACTION_DONE || event.keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_DOWN) {
-                if (!textToSearchEt.text.toString().isEmpty()) presenter.getMoviesByName(page.toString(), textToSearchEt.text.toString())
+                if (!textToSearchEt.text.toString().isEmpty()) {
+                    presenter.getMoviesByName(page.toString(), textToSearchEt.text.toString())
+                    searchedWords.add(textToSearchEt.text.toString())
+                }
                 hideKeyboard(context!!, view!!)
             }
             true
@@ -111,7 +114,11 @@ class HomeFragment : GeneralFragment(), HomeMvp.View {
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item!!.itemId) {
-            show_words -> if (searchedWords.size > 0) Toast.makeText(context, "OPEN ACTIVITY", Toast.LENGTH_SHORT).show()
+            show_words -> if (searchedWords.size > 0) {
+                val intent = WordListActivity.newIntent(activity!!, searchedWords)
+                startActivity(intent)
+            }
+
         }
         return super.onOptionsItemSelected(item)
     }

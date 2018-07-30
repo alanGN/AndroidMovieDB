@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <View
+        android:background="@color/colorDarkTranslucent"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+    <TextView
+        android:textColor="@color/colorWhite"
+        android:layout_gravity="bottom"
+        android:id="@+id/wordTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_general_between_items"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:text="@string/title" />
+</FrameLayout>

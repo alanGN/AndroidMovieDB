@@ -12,7 +12,7 @@ import javax.inject.Singleton
  * Created by ALAN-PC on 29/07/2018
  */
 @Singleton
-@Component(modules = arrayOf(ApplicationModule::class, NetworkModule::class))
+@Component(modules = [(ApplicationModule::class), (NetworkModule::class)])
 abstract class ApplicationComponent {
     abstract fun inject(application: BaseApplication)
     abstract fun plus(module: HomeModule): HomeComponent

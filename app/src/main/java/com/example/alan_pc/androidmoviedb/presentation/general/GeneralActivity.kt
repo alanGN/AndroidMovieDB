@@ -37,6 +37,7 @@ abstract class GeneralActivity : AppCompatActivity() {
 
     }
 
+
     /**
      * Retrieve the application component
      * @return
