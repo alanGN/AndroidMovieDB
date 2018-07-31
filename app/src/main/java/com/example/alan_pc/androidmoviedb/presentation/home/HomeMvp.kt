@@ -1,5 +1,6 @@
 package com.example.alan_pc.androidmoviedb.presentation.home
 
+import com.example.alan_pc.androidmoviedb.domain.business.tmdb.Movie
 import com.example.alan_pc.androidmoviedb.domain.business.tmdb.MovieResponse
 import com.example.alan_pc.androidmoviedb.presentation.general.GeneralPresent
 import com.example.alan_pc.androidmoviedb.presentation.general.GeneralView
@@ -10,7 +11,7 @@ import com.example.alan_pc.androidmoviedb.presentation.general.GeneralView
 interface HomeMvp {
 
     interface View : GeneralView {
-        fun onResultOk(movieResponse: MovieResponse)
+        fun onResultOk(movieList:MutableList<Movie>, page: Int)
     }
 
     interface Presenter : GeneralPresent {

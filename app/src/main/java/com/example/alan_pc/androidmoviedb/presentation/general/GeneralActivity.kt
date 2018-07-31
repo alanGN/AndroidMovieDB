@@ -16,7 +16,9 @@ abstract class GeneralActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(getLayoutId())
         initializeDependencies()
-        initResources()
+        if (savedInstanceState == null){
+            initResources()
+        }
     }
 
     /**

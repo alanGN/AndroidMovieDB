@@ -15,7 +15,7 @@ class HomePresenter @Inject constructor(var view: HomeMvp.View, var tmdbBo: Tmdb
     }
 
     override fun getMoviesOk(movieResponse: MovieResponse) {
-            view.onResultOk(movieResponse)
+            view.onResultOk(movieResponse.movieList,movieResponse.page)
     }
 
     override fun unSubscribe() {

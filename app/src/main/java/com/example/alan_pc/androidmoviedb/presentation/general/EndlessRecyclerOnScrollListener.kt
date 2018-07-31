@@ -33,4 +33,9 @@ abstract class EndlessRecyclerOnScrollListener : RecyclerView.OnScrollListener()
     }
 
     abstract fun onLoadMore()
+
+    fun initializeValues(){
+        mPreviousTotal = 0
+        mLoading = true
+    }
 }

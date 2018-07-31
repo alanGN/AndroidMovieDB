@@ -39,4 +39,9 @@ class MovieAdapter(val movieList: MutableList<Movie>) : RecyclerView.Adapter<Mov
             Picasso.get().load("http://image.tmdb.org/t/p/w500" + item.backdrop_path).error(R.mipmap.grumpy_404).fit().centerCrop().into(movieCoverIv)
         }
     }
+
+
+    fun clearAdapter() {
+        if(this.movieList.size>0) this.movieList.clear()
+    }
 }
